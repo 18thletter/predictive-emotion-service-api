@@ -18,52 +18,40 @@ or excited to an 87% accuracy.
 You can use the service to ascertain mood data from heartbeat data. It analyzes 
 small variations in heartbeat intervals to determine levels of emotion.
 
-## Dataset Collection [/datasets]
+Out of the box, Predictive Emotion Service already provides datasets for anger,
+sadness, excitement, and happiness. More can be added by uploading heartbeat
+datasets and labeling with emotions.
+
+## Dataset Collection [/v1/datasets]
+
+Datasets contain heartbeat data associated with an emotion label.
 
 ### Create a Dataset [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+Create a new dataset with an emotion.
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "emotion": "happy"
         }
 
 + Response 201 (application/json)
 
-    + Headers
-
-            Location: /questions/2
-
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "id": 12,
+                "createdAt": "2016-09-15T16:51:41.000+0000",
+                "updatedAt": "2016-09-15T16:51:41.000+0000",
+                "emotion": "happy"
+            }
+            
++ Response 400 (application/json)
+
+    + Body
+    
+            {
             }
 
 ### List All Questions [GET]
