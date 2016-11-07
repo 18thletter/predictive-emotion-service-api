@@ -38,44 +38,53 @@ Create a new dataset with an emotion.
 
 + Response 201 (application/json)
 
-    + Body
-
             {
                 "id": 12,
-                "createdAt": "2016-09-15T16:51:41.000+0000",
-                "updatedAt": "2016-09-15T16:51:41.000+0000",
+                "createdAt": "2016-11-06T16:51:41.000+0000",
+                "updatedAt": "2016-11-06T16:51:41.000+0000",
                 "emotion": "happy"
             }
             
 + Response 400 (application/json)
 
-    + Body
-    
             {
             }
 
-### List All Questions [GET]
+### List Datasets [GET]
+
+List all datasets. Predictive Emotion Service comes with 4 pre-trained
+datasets: happy, sad, angry, and excited.
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
+                "id": 12,
+                "createdAt": "2016-11-06T16:51:41.000+0000",
+                "updatedAt": "2016-11-06T16:51:41.000+0000",
+                "emotion": "happy"
+            },
+            {
+                "id": 13,
+                "createdAt": "2016-11-06T20:42:31.000+0000",
+                "updatedAt": "2016-11-06T20:42:31.000+0000",
+                "emotion": "sad"
+            },
+            {
+                "id": 14,
+                "createdAt": "2016-11-06T20:45:02.000+0000",
+                "updatedAt": "2016-11-06T20:45:02.000+0000",
+                "emotion": "angry"
+            },
+            {
+                "id": 15,
+                "createdAt": "2016-11-06T20:58:14.000+0000",
+                "updatedAt": "2016-11-06T20:58:14.000+0000",
+                "emotion": "excited"
+            },
         ]
+        
++ Response 400 (application/json)
+
+            {
+            }/da
