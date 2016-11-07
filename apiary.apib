@@ -58,32 +58,34 @@ datasets: happy, sad, angry, and excited.
 
 + Response 200 (application/json)
 
-        [
             {
-                "id": 12,
-                "createdAt": "2016-11-06T16:51:41.000+0000",
-                "updatedAt": "2016-11-06T16:51:41.000+0000",
-                "emotion": "happy"
-            },
-            {
-                "id": 13,
-                "createdAt": "2016-11-06T20:42:31.000+0000",
-                "updatedAt": "2016-11-06T20:42:31.000+0000",
-                "emotion": "sad"
-            },
-            {
-                "id": 14,
-                "createdAt": "2016-11-06T20:45:02.000+0000",
-                "updatedAt": "2016-11-06T20:45:02.000+0000",
-                "emotion": "angry"
-            },
-            {
-                "id": 15,
-                "createdAt": "2016-11-06T20:58:14.000+0000",
-                "updatedAt": "2016-11-06T20:58:14.000+0000",
-                "emotion": "excited"
-            },
-        ]
+                "datasets": [
+                    {
+                        "id": 12,
+                        "createdAt": "2016-11-06T16:51:41.000+0000",
+                        "updatedAt": "2016-11-06T16:51:41.000+0000",
+                        "emotion": "happy"
+                    },
+                    {
+                        "id": 13,
+                        "createdAt": "2016-11-06T20:42:31.000+0000",
+                        "updatedAt": "2016-11-06T20:42:31.000+0000",
+                        "emotion": "sad"
+                    },
+                    {
+                        "id": 14,
+                        "createdAt": "2016-11-06T20:45:02.000+0000",
+                        "updatedAt": "2016-11-06T20:45:02.000+0000",
+                        "emotion": "angry"
+                    },
+                    {
+                        "id": 15,
+                        "createdAt": "2016-11-06T20:58:14.000+0000",
+                        "updatedAt": "2016-11-06T20:58:14.000+0000",
+                        "emotion": "excited"
+                    }
+                ]
+            }
         
 + Response 400 (application/json)
 
@@ -128,24 +130,26 @@ according to the timestamp.
 
 + Request (application/json)
 
-        [
             {
-                "heartbeat_start_time": "2016-11-06T21:47:52.147+2235",
-                "hearbeat_end_time": "2016-11-06T21:47:52.346+2547"
-            },
-            {
-                "heartbeat_start_time": "2016-11-06T21:47:53.723+6478",
-                "hearbeat_end_time": "2016-11-06T21:47:53.889+3572"
-            },
-            {
-                "heartbeat_start_time": "2016-11-06T21:47:55.223+2893",
-                "hearbeat_end_time": "2016-11-06T21:47:55.347+1498",
-            },
-            {
-                "heartbeat_start_time": "2016-11-06T21:47:55.223+2893",
-                "hearbeat_end_time": "2016-11-06T21:47:55.223+2893",
+                "heartbeats": [
+                    {
+                        "heartbeat_start_time": "2016-11-06T21:47:52.147+2235",
+                        "hearbeat_end_time": "2016-11-06T21:47:52.346+2547"
+                    },
+                    {
+                        "heartbeat_start_time": "2016-11-06T21:47:53.723+6478",
+                        "hearbeat_end_time": "2016-11-06T21:47:53.889+3572"
+                    },
+                    {
+                        "heartbeat_start_time": "2016-11-06T21:47:55.223+2893",
+                        "hearbeat_end_time": "2016-11-06T21:47:55.347+1498",
+                    },
+                    {
+                        "heartbeat_start_time": "2016-11-06T21:47:55.223+2893",
+                        "hearbeat_end_time": "2016-11-06T21:47:55.223+2893",
+                    }
+                ]
             }
-        ]
         
 + Response 204
 
