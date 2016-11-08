@@ -164,6 +164,8 @@ Emotions are labels for datasets. "sad", "happy", "angry", "excited" are
 pre-trained datasets already included with Predictive Emotion Service. More
 emotions can be added, and data can also be added to the 4 existing datasets.
 
+Best practices on emotion naming: emotions should be named "I am feeling ...".
+
 ### Create an emotion [POST]
 
 Creates a new emotion.
@@ -180,6 +182,21 @@ Creates a new emotion.
 + Response 400
 
             {
+            }
+
+### Get Emotions [GET]
+
+Gets a list of emotions.
+
++ Response 200 (application/json)
+
+            {
+                "emotions": [
+                    "sad",
+                    "happy",
+                    "angry",
+                    "excited"
+                ]
             }
 
 ## Corrections [/v1/correct]
